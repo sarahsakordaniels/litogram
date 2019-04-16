@@ -12,13 +12,14 @@
   <tbody>
     <% @authors.each do |author| %>
         <%= link_to author.name, author_path(author) %>
-        <%= link_to 'Show', author %>
-        <%= link_to 'Edit', edit_author_path(author) %>
-        <%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%# link_to 'Show', author %>
+          <%# link_to 'Edit', edit_author_path(author)  %>
+          <%# link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' }  %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Author', new_author_path %>
+<%= link_to 'Home', root_path %>
+<!-- link_to 'New Author', new_author_path -->

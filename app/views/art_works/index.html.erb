@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Art Works</h1>
+
+<table>
+
+  <tbody>
+    <% @art_works.each do |art_work| %>
+      <tr>
+        <h2><%= art_work.title %></h2>
+        <p>Style: <%= art_work.style %></p>
+        <p>Description: <%= art_work.description %></p>
+        <p>Year: <%= art_work.year %></p>
+        <p>Wiki: <%= link_to art_work.wiki, art_work.wiki %></p>
+        <td><%= image_tag(art_work.image_link ) %></td>
+        <td><%# link_to 'Show', art_work %></td>
+        <td><%# link_to 'Edit', edit_art_work_path(art_work) %></td>
+        <td><%# link_to 'Destroy', art_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%# link_to 'New Art Work', new_art_work_path %>

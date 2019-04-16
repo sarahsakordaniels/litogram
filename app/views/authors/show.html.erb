@@ -3,7 +3,8 @@
 <br>
 <h3>Bio:</h3> <%=@author.bio%>
 <br>
-<h3>Wiki:</h3><%=@author.wiki%>
+<h3>Wiki:</h3><%=link_to @author.wiki, @author.wiki%>
 <br><br>
-<%= link_to 'Edit', edit_author_path(@author) %> |
+<%#link_to 'Edit', edit_author_path(@author) %>
 <%= link_to 'Back', authors_path %>
+<%= link_to 'Home', root_path %>

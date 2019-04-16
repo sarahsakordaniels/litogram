@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<h3>Name:</h3> <%=@artist.name%>
+<br>
+<h3>Bio:</h3> <%=@artist.bio%>
+<br>
+<h3>Wiki:</h3><%=link_to @artist.wiki, @artist.wiki%>
+<br><br>
+<%#link_to 'Edit', edit_artist_path(@artist) %>
+<%= link_to 'Back', artists_path %>
+<%= link_to 'Home', root_path %>
