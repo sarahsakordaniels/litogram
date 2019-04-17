@@ -12,9 +12,12 @@
   <tbody>
     <% @texts.each do |text| %>
       <tr>
-        <td><%= link_to 'Show', text %></td>
-        <td><%= link_to 'Edit', edit_text_path(text) %></td>
-        <td><%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <h2><%= link_to text.title, text_path(text)%></h2>
+        <p>By: <%= text.author.name %></p>
+        <p><%= text.content %></p>
+        <!-- <td> link_to 'Show', text </td> -->
+        <!-- <td> link_to 'Edit', edit_text_path(text) </td> -->
+        <!-- <td> link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } </td> -->
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +25,5 @@
 
 <br>
 
-<%= link_to 'New Text', new_text_path %>
+ <!-- link_to 'New Text', new_text_path  -->
+ <%= link_to 'Home', root_path %>

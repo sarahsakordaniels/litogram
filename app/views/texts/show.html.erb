@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
-<h2><%= @text.title %></h2><br>
-<%= @text.content %>
-<%= link_to 'Edit', edit_text_path(@text) %> |
+
+  <h2><%= @text.title%></h2>
+
+<tr>
+  <p>By: <%= @text.author.name %></p>
+  <p><%= @text.content %></p>
+  <!-- <td> link_to 'Show', text </td> -->
+  <!-- <td> link_to 'Edit', edit_text_path(text) </td> -->
+  <!-- <td> link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } </td> -->
+</tr>
+
+
+
+<%# <%= link_to 'Edit', edit_text_path(@text) %>
 <%= link_to 'Back', texts_path %>
+ <%= link_to 'Home', root_path %>

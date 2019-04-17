@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_162653) do
+ActiveRecord::Schema.define(version: 2019_04_16_222542) do
+
+  create_table "art_works", force: :cascade do |t|
+    t.string "title"
+    t.string "style"
+    t.text "description"
+    t.integer "year"
+    t.string "wiki"
+    t.string "image_link"
+    t.integer "artist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_art_works_on_artist_id"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.string "wiki"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -20,25 +41,13 @@ ActiveRecord::Schema.define(version: 2019_04_16_162653) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "text_genres", force: :cascade do |t|
-    t.integer "text_id"
-    t.integer "genre_id"
-    t.index ["genre_id"], name: "index_text_genres_on_genre_id"
-    t.index ["text_id"], name: "index_text_genres_on_text_id"
-  end
-
   create_table "texts", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "genre"
     t.index ["author_id"], name: "index_texts_on_author_id"
   end
 
@@ -72,6 +81,8 @@ ActiveRecord::Schema.define(version: 2019_04_16_162653) do
     t.text "example"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "part_of_speech"
+    t.string "pronunciation"
   end
 
 end
