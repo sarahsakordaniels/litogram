@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :accounts
   resources :art_works
   resources :artists
   resources :texts

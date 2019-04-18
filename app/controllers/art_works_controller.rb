@@ -1,6 +1,6 @@
 class ArtWorksController < ApplicationController
   before_action :set_art_work, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_account!, only: [:new]
   # GET /art_works
   # GET /art_works.json
   def index

@@ -1,6 +1,6 @@
 class WordOfTheDaysController < ApplicationController
   before_action :set_word_of_the_day, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_account!, only: [:new]
   # GET /word_of_the_days
   # GET /word_of_the_days.json
   def index

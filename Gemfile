@@ -51,7 +51,7 @@ group :development do
 end
 
 gem 'bootstrap', '~> 4.3.1'
-
+gem 'devise', '~> 4.2'
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'

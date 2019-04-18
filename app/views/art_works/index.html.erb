@@ -102,5 +102,6 @@
 
 
 
-
-<%# link_to 'New Art Work', new_art_work_path %>
+<% if account_signed_in?%>
+<p><%= link_to 'Add New Art Work', new_art_work_path %></p>
+<% end %>

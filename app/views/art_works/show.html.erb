@@ -67,6 +67,9 @@
 </body>
 </html>
 
+<% if account_signed_in?%>
+<p><%= link_to 'Add New Art Work', new_art_work_path %></p>
+<% end %>
 
 
 <%# link_to 'Edit', edit_art_work_path(@art_work) %> |
