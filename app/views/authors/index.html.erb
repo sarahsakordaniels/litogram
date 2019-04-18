@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <%= stylesheet_link_tag "pages", :media => "all" %>
+    <%= stylesheet_link_tag "authors", :media => "all" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -47,38 +47,16 @@
       </nav>
     </div>
   </header>
-
-  <main role="main" class="inner cover">
-    <% if @media.class == ArtWork %>
-      <h3 class="cover-heading"><%= @media.title %></h3>
-      <p class="lead">Artist: <%= link_to @media.artist.name, artist_path(@media.artist) %></p>
-      <div class="container"><img src=<%= @media.image_link %> alt="a picture"></div>
-      <p class="lead">Description: <%= @media.description %></p>
-      <p class="lead">Created: <%= @media.year %></p>
-      <p class="lead">Style: <%= @media.style %></p>
+<h2>Authors</h2>
+<%@authors.each do |author|%>
+<p class="left"><%=link_to author.name, author_path(author)%></p>
+<%end%>
 
 
-    <% elsif @media.class == WordOfTheDay %>
-        <h3 class="cover-heading"><%= @media.word %></h3>
-        <p class="lead">Definition: <%= @media.definition %></p>
-        <p class="lead">Part Of Speech: <%= @media.part_of_speech %></p>
-        <p class="lead">Pronunciation: <%= @media.pronunciation %></p>
-        <p class="lead">Example Usage: <%= @media.example %></p>
-        <p class="lead">Origin: <%= @media.origin %></p>
+  <!-- <main role="main" class="inner cover">
 
 
-    <% else  %>
-        <h3 class="cover-heading"><%= @media.title %></h3>
-        <p class="lead">By: <%=link_to @media.author.name, author_path(@media.author) %></p>
-        <p class="lead"><%= @media.content %></p>
-
-
-    <% end %>
-
-      <%= button_to "Next", root_path, :method => :get %>
-      <!-- <a href="/" class="btn btn-lg btn-secondary">Next</a> -->
-
-  </main>
+  </main> -->
 
   <footer class="mastfoot mt-auto">
     <div class="inner">

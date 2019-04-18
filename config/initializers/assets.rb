@@ -15,3 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( pages.scss )
 Rails.application.config.assets.precompile += %w( authors.scss )
+Rails.application.config.assets.precompile += %w( artists.scss )
+Rails.application.config.assets.precompile += %w( word_of_the_days.scss )
