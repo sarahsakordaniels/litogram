@@ -8,20 +8,23 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #6f8a75;
 }
+
 
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #6f8a75;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
+  background-color: #6f8a75;
   border: .05rem solid #fff;
 }
 
-
+#app_title{
+  text-decoration: underline;
+}
 /*
  * Base structure
  */
@@ -37,7 +40,7 @@ body {
   display: flex;
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  // box-shadow: inset 0 0 0rem rgba(0, 0, 0, .5);
 }
 
 .cover-container {
@@ -59,7 +62,7 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: #6f8a75;
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -115,5 +118,5 @@ img{
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: #fff;
 }
