@@ -41,25 +41,27 @@
     <div class="inner">
       <h1 id = "app_title" class="masthead-brand">Litogram</h1>
       <nav class="nav nav-masthead justify-content-center">
-        <a id = "nav_butt" class="nav-link active" href="#">Home</a>
-        <a id = "nav_butt" class="nav-link active" href="#">Features</a>
+        <a id = "nav_butt" class="nav-link active" href="/">Home</a>
         <a id = "nav_butt" class="nav-link active" href="#">Contact</a>
+        <a id = "nav_butt" class="nav-link active" href="#">Sign In</a>
+
       </nav>
     </div>
   </header>
 <h2>Word of The Day</h2>
 
+<%@word_of_the_days.each do |word_of_the_day|%>
   <h2><%=link_to word_of_the_day.word, word_of_the_day_path(word_of_the_day) %></h2>
-  <p>Definion: <%= word_of_the_day.definition %></p>
-  <p>Origin: <%= word_of_the_day.origin %></p>
-  <p>Expample Usage: <%= word_of_the_day.example %></p>
-  <p>Part of Speech: <%= word_of_the_day.part_of_speech %></p>
-  <p>Pronunciation: <%= word_of_the_day.pronunciation %></p>
+  <p class="left">Definion: <%= word_of_the_day.definition %></p>
+  <p class="left">Origin: <%= word_of_the_day.origin %></p>
+  <p class="left">Expample Usage: <%= word_of_the_day.example %></p>
+  <p class="left">Part of Speech: <%= word_of_the_day.part_of_speech %></p>
+  <p class="left">Pronunciation: <%= word_of_the_day.pronunciation %></p>
   <%# link_to 'Show', word_of_the_day %>
   <%# link_to 'Edit', edit_word_of_the_day_path(word_of_the_day) %>
   <%# link_to 'Destroy', word_of_the_day, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 
-  </main> -->
 
   <footer class="mastfoot mt-auto">
     <div class="inner">

@@ -1,3 +1,105 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <%= stylesheet_link_tag "art_works", :media => "all" %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Cover Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h1 id = "app_title" class="masthead-brand">Litogram</h1>
+      <nav class="nav nav-masthead justify-content-center">
+        <a id = "nav_butt" class="nav-link active" href="/">Home</a>
+        <a id = "nav_butt" class="nav-link active" href="#">Contact</a>
+        <a id = "nav_butt" class="nav-link active" href="#">Sign In</a>
+
+      </nav>
+    </div>
+  </header>
+<h2>Art Works</h2>
+<% @art_works.each do |art_work| %>
+
+    <h2 ><%= link_to art_work.title, art_work_path(art_work) %></h2>
+    <p >Style: <%= art_work.style %></p>
+    <p >Description: <%= art_work.description %></p>
+    <p >Year: <%= art_work.year %></p>
+    <p >Wiki: <%= link_to art_work.wiki, art_work.wiki %></p>
+    <td ><%= image_tag(art_work.image_link ) %></td><br><br><br><br><br>
+    <td><%# link_to 'Show', art_work %></td>
+    <td><%# link_to 'Edit', edit_art_work_path(art_work) %></td>
+    <td><%# link_to 'Destroy', art_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+<% end %>
+
+  <!-- <main role="main" class="inner cover">
+
+
+  </main> -->
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p> Litogram is fast, random, smart, useful stuff to help you pass time. </p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Art Works</h1>
@@ -5,19 +107,7 @@
 <table>
 
   <tbody>
-    <% @art_works.each do |art_work| %>
-      <tr>
-        <h2><%= art_work.title %></h2>
-        <p>Style: <%= art_work.style %></p>
-        <p>Description: <%= art_work.description %></p>
-        <p>Year: <%= art_work.year %></p>
-        <p>Wiki: <%= link_to art_work.wiki, art_work.wiki %></p>
-        <td><%= image_tag(art_work.image_link ) %></td>
-        <td><%# link_to 'Show', art_work %></td>
-        <td><%# link_to 'Edit', edit_art_work_path(art_work) %></td>
-        <td><%# link_to 'Destroy', art_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+
   </tbody>
 </table>
 
