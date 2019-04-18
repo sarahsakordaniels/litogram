@@ -69,6 +69,6 @@ class TextsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def text_params
-      params.fetch(:text, {})
+      params.require(:text).permit(:title, :content, :author_id)
     end
 end

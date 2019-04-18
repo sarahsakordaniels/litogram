@@ -69,6 +69,6 @@ class WordOfTheDaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def word_of_the_day_params
-      params.fetch(:word_of_the_day, {})
+      params.require(:word_of_the_day).permit(:word, :definition, :origin, :example, :part_of_speech, :pronunciation)
     end
 end

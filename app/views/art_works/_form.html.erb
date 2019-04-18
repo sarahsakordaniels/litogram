@@ -41,6 +41,12 @@
     <%= form.text_field :image_link %>
   </div>
 
+<div class="field">
+  Artist: <%=collection_select(:art_work, :artist_id, Artist.all, :id, :name) %>
+</div>
+
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

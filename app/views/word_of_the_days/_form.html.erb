@@ -10,8 +10,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
+  <%= form_for @word_of_the_day do |f| %>
+  Word: <%=f.text_field :word %><br>
+  Definition: <%=f.text_area :definition %><br>
+  Origin: <%=f.text_area :origin %><br>
+  Example: <%=f.text_area :example %><br>
+  Part of Speech: <%=f.text_field :part_of_speech %><br>
+  pronunciation: <%=f.text_area :pronunciation %><br>
+    <div class="actions"><br>
+      <%= f.submit %>
   </div>
+<% end %>
 <% end %>
