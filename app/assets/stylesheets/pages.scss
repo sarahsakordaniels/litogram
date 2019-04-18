@@ -99,6 +99,17 @@ body {
   font-weight: 700;
 }
 
+img{
+  height: 500px
+}
+@media(max-width: 500px){
+  img{
+    height: 400px
+  }}
+
+  // .container{
+  //   width: 800px;
+  // }
 
 /*
  * Footer

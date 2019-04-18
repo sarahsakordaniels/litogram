@@ -16,13 +16,13 @@ class PagesController < ApplicationController
 
     @media = @type.find(@media_id_number)
 
-    if @type == Text
-      #display form = title, author, and content
-    if @type == WordOfTheDay
-      #display form = word, definition, origin, example
-    if @type == ArtWork
-      #display form = title, style, artist, description
-
+  #   if @type == Text
+  #     #display form = title, author, and content
+  #   if @type == WordOfTheDay
+  #     #display form = word, definition, origin, example
+  #   if @type == ArtWork
+  #     #display form = title, style, artist, description
+  #
   end
 
 

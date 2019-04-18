@@ -49,16 +49,39 @@
   </header>
 
   <main role="main" class="inner cover">
-    <h1 class="cover-heading"><%= @media.title %></h1>
-    <p class="lead"><%= @media %></p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-    </p>
+    <% if @media.class == ArtWork %>
+      <div class="container"><img src=<%= @media.image_link %> alt="a picture"></div>
+      <h3 class="cover-heading"><%= @media.title %></h3>
+      <p class="lead">Description: <%= @media.description %></p>
+      <p class="lead">Artist: <%= @media.artist.name %></p>
+      <p class="lead">Created: <%= @media.year %></p>
+      <p class="lead">Style: <%= @media.style %></p>
+
+
+    <% elsif @media.class == WordOfTheDay %>
+        <h1 class="cover-heading"><%= @media.word %></h1>
+        <p class="lead">Definition: <%= @media.definition %></p>
+        <p class="lead">Part Of Speech: <%= @media.part_of_speech %></p>
+        <p class="lead">Pronunciation: <%= @media.pronunciation %></p>
+        <p class="lead">Example Usage: <%= @media.example %></p>
+        <p class="lead">Origin: <%= @media.origin %></p>
+
+
+    <% else  %>
+        <h1 class="cover-heading"><%= @media.title %></h1>
+        <p class="lead"><%= @media.content %></p>
+        <p class="lead">By: <%= @media.author.name %></p>
+
+    <% end %>
+
+
+      <a href="" class="btn btn-lg btn-secondary">Learn more</a>
+
   </main>
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>Cover template for <%= @media %> <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
     </div>
   </footer>
 </div>
