@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe AuthorsController, type: :controller do
-
+RSpec.describe TextsController, type: :controller do
   context 'GET #index' do
     it 'returns a success response' do
       expect(response).to be_successful
