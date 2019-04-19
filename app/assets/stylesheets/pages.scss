@@ -18,6 +18,8 @@ a:hover {
 }
 
 
+
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -26,6 +28,11 @@ a:hover {
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #6f8a75;
   border: .05rem solid #fff;
+}
+
+.writing{
+  align-content: center;
+  max-width: 45em;
 }
 
 #app_title{

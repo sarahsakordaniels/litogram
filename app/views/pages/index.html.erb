@@ -72,10 +72,13 @@
 
 
     <% else  %>
+      <div class="container">
+
+
         <h3 class="cover-heading"><%= @media.title %></h3>
         <p class="lead">By: <%=link_to @media.author.name, author_path(@media.author) %></p>
-        <p class="lead"><%= @media.content %></p>
-
+        <p class=""><%= @media.content %></p>
+      </div>
 
     <% end %>
 
