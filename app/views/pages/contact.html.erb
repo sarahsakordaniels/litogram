@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <%= stylesheet_link_tag "texts", :media => "all" %>
+    <%= stylesheet_link_tag "pages", :media => "all" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -51,19 +51,14 @@
       </nav>
     </div>
   </header>
-<h2>Texts</h2>
 
-<% @texts.each do |text| %>
+  <main role="main" class="inner cover">
+    <p>Ben Reilly  – benjamin.reilly@gmail.com
 
-    <h2><%= link_to text.title, text_path(text)%></h2>
-    <p>By: <%= text.author.name %></p>
-    <p><%= text.content %></p>
-    <!-- <td> link_to 'Show', text </td> -->
-    <!-- <td> link_to 'Edit', edit_text_path(text) </td> -->
-    <!-- <td> link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } </td> -->
 
-<% end %>
+    <p>Sarah Daniels – ssdaniels13@gmail.com
 
+  </main>
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
@@ -73,10 +68,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-
- <!-- link_to 'New Text', new_text_path  -->
- <%= link_to 'Home', root_path %>
